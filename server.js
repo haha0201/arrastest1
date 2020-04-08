@@ -4582,15 +4582,15 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (ran.chooseChance(40, 3)) {
                     case 0: 
-                        choice = [[Class.elite_destroyer], 5, 'a', 'nest'];
+                        choice = [[Class.elite_destroyer], 2, 'a', 'nest'];
                         break;
                     case 1: 
-                        choice = [[Class.palisade], 3, 'castle', 'norm']; 
+                        choice = [[Class.palisade], 2, 'castle', 'norm']; 
                         sockets.broadcast('A strange trembling...');
                         break;
                     case 2: 
                         choice = [[Class.firework], 10, 'a', 'nest']; 
-                        sockets.broadcast('Fireworks!');
+                        sockets.broadcast('A bunch of Fireworks!');
                         break;
                 }
                 boss.prepareToSpawn(...choice);
