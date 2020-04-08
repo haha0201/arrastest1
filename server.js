@@ -4600,10 +4600,10 @@ var maintainloop = (() => {
         };
     })();
     let spawnCrasher = census => {
-        if (ran.chance(1 -  0.005 * census.streamcrasher / room.maxFood / room.nestFoodAmount)) {
+        if (ran.chance(1 -  0.005 * census.crasher / room.maxFood / room.nestFoodAmount)) {
             let spot, i = 30;
             do { spot = room.randomType('nest'); i--; if (!i) return 0; } while (dirtyCheck(spot, 100));
-            let type = (ran.dice(80)) ? ran.choose([Class.sentryGun, Class.sentrySwarm, Class.sentryTrap, Class.sentrySkim]) : Class.streamcrasher;
+            let type = (ran.dice(80)) ? ran.choose([Class.sentryGun, Class.sentrySwarm, Class.sentryTrap, Class.sentrySkim]) : Class.crasher;
             let o = new Entity(spot);
                 o.define(type);
                 o.team = -100;
@@ -4635,7 +4635,7 @@ var maintainloop = (() => {
         let bots = [];
         return () => {
             let census = {
-                streamcrasher: 0,
+                crasher: 0,
                 miniboss: 0,
                 tank: 0,
             };    
