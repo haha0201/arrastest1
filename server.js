@@ -4662,8 +4662,8 @@ var maintainloop = (() => {
                 bots = bots.filter(e => { return !e.isDead(); });
                 // Slowly upgrade them
                 bots.forEach(o => {
-                    if (o.skill.level < 260) {
-                        o.skill.score += 5000000;
+                    if (o.skill.level < 400) {
+                        o.skill.score += 100000000;
                         o.skill.maintain();
                     }
                 });
